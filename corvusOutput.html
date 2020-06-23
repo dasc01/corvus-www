@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Corvus Output</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="ChemDoodleWeb/ChemDoodleWeb.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/cascade.css">
+ 
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://newt.nersc.gov/js/newt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- fusion chart -->
+  <script type="text/javascript" src="fusioncharts/js/fusioncharts.js"></script>
+  <script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.fusion.js"></script>
+  <script type="text/javascript" src="ChemDoodleWeb/ChemDoodleWeb.js"></script>
+  <script type="text/javascript" src="js/manCorvus.js"></script>
+  <script type="text/javascript" src="js/libraryFuncs.js"></script>
+  <script type="text/javascript" src="js/workTable.js"></script>
+
+</head>
+<body id="box-1">
+<div id="corvus-main">
+<div id="navbar1"></div>	
+
+<header id="header" class="page-header">
+  <div class="container-fluid">
+  <div class="row">
+    <div  class="col-sm-4">
+      <img id="birdimg" src="css/bird.png" >
+    </div>
+    <div class="col-sm-4"> 
+    <h1 class="text-center">Corvus Visualize</h1>
+    <p class="text-center">Select a completed job to visualize output</p>
+  </div>
+</div>
+</div>
+</header>
+  
+<div class="container-fluid">
+<div class="row">
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- ScrollBar -->
+    <div class="col-sm-5">
+    <div id="fileBox" style="width:100%;height:500px;line-height:3em;overflow:scroll;padding:5px;background-color:#424443;color:#aeafaf;border:4px double #000;">
+      <table  class="table table-dark">
+	<thead><h3 class="text-center">Corvus Workspace Listing</h3></thead>
+	<tbody id="filetable">
+	<span id="loading" align="center">
+	  <img src="css/ajax-loader.gif">
+	</span>
+	</tbody>
+      </table>
+      <!--This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large.-->
+</div>
+      
+      
+    </div>
+    <!-- drop down menu -->
+<div class="col-sm-2">
+<form action="#" id="vizFrm">
+    <div class="form-group">
+      <label for="sel1">Choose Visualization Type</label>
+      <select class="form-control" id="sel1" name="calctype">
+        <option>ENERGY</option>
+        <option>OPTIMIZE</option>
+        <option>SPECTRA</option>
+      </select>
+    </div>
+    <button id="viewB" type="submit" class="btn btn-primary">View</button>
+  </form>
+</div>
+
+<div class="col-sm-5" style="text-align:center" id="vizgraph" > 
+  <span id="vamsg" style="font-size: 24pt ; color:#525151 ;">Visualization Area</span>
+  <!-- graph -->
+  <div id="chemd">
+   <script  type="text/javascript">
+      var transformBallAndStick = new ChemDoodle.TransformCanvas3D('transformBallAndStick', 500, 500);
+      transformBallAndStick.specs.set3DRepresentation('Ball and Stick');
+      transformBallAndStick.specs.backgroundColor = 'black';
+      transformBallAndStick.specs.shapes_color='white';
+      transformBallAndStick.specs.compass_display=true;
+    </script> 
+  </div> 
+  <!--<title>FusionCharts Suite XT</title>-->
+  <!--<div id="chart-container">FusionCharts XT!</div>-->
+  <!-- end of graph -->
+</div>
+</div>
+</div>
+
+<hr>
+
+<!--<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div>
+   <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div>
+   <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div> 
+</div>
+</div> -->
+</div>   <!-- end of corvus-main -->
+
+<hr>
+
+<div id="foot1"></div> 
+
+</body>
+</html>

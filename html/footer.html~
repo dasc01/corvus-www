@@ -1,0 +1,14 @@
+<footer class="p-3 mb-2 bg-secondary text-white">
+  <div class="container-fluid">
+  <div class="row">
+    <div  class="col-sm-3">
+      <img id="birdimg" src="css/bird.png" >
+    </div>
+    <div class="col-sm-6">
+        <p class="text-center">SLAC NATIONAL ACCELERATOR LABORATORY 2575 <span> Sand Hill Road, Menlo Park, CA 94025</span></p>
+    <p class="text-center">Operated by Stanford University for the U.S. Department of Energy Office of Science
+    </p>  
+  </div>
+</div>
+</div>
+</footer>        

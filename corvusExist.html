@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Corvus Edit</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="ChemDoodleWeb/ChemDoodleWeb.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/cascade.css">
+
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://newt.nersc.gov/js/newt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="ChemDoodleWeb/ChemDoodleWeb.js"></script>
+  <script type="text/javascript" src="js/manCorvus.js"></script>
+  <script type="text/javascript" src="js/libraryFuncs.js"></script>
+  <script type="text/javascript" src="js/editTable.js"></script>
+
+
+</head>
+<body id="box-1">
+<div id="corvus-main">
+<div id="navbar1"></div>	
+
+
+<header id="header" class="page-header">
+  <div class="container-fluid">
+  <div class="row">
+    <div  class="col-sm-4">
+      <img id="birdimg" src="css/bird.png" >
+    </div>
+    <div class="col-sm-4"> 
+    <h1 class="text-center">Corvus Edit</h1>
+    <p class="text-center">Edit an existing project</p>
+  </div>
+</div>
+</div>
+</header>
+  
+<div class="container-fluid">
+<div class="row">
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- ScrollBar -->
+    <div class="col-sm-5">
+    <div id="fileBox" style="width:100%;height:500px;line-height:3em;overflow:scroll;padding:5px;background-color:#424443;color:#b0b2b1;border:4px double #000;">
+      <table  class="table table-dark">
+        <thead><h3 class="text-center">Corvus Workspace Listing</h3></thead>
+        <tbody id="edittable">
+        <span id="editldr" align="center">
+          <img src="css/ajax-loader.gif">
+        </span>
+        </tbody>
+      </table>
+
+      <!--This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large.--> 
+</div>
+      
+      
+    </div>
+    <!-- drop down menu -->
+<div class="col-sm-2">
+<form id="editFr" action="#">
+    <div class="form-group">
+      <label for="sel1">Choose Calculation Type</label>
+      <select class="form-control" id="sel1" name="calctype">
+        <option>ENERGY</option>
+        <option>OPTIMIZE</option>
+        <option>SPECTRA</option>
+      </select>
+    </div>
+    <button id="rnJob" type="submit" class="btn btn-primary">Submit Calculation</button>
+  </form>
+<hr>
+<div class="row">
+  <span id="ldr2" style="display:none;" align="center">
+    <img src="css/spinner.gif">
+  </span>
+</div>
+</div>
+<div class="col-sm-5" id="emptarea" >
+  <div id="edchem">
+   <script  type="text/javascript">
+      var transformBallAndStick = new ChemDoodle.TransformCanvas3D('transformBallAndStick', 500, 500);
+      transformBallAndStick.specs.set3DRepresentation('Ball and Stick');
+      transformBallAndStick.specs.backgroundColor = 'black';
+      transformBallAndStick.specs.shapes_color='white';
+      transformBallAndStick.specs.compass_display=true;
+    </script> 
+  </div> 
+<!--    <script type="text/javascript" src="js/exInput.js"></script> -->
+</div>
+</div>
+</div>
+
+<!---
+
+<hr>
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div>
+   <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div>
+   <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div> 
+</div>
+</div>
+-->
+
+</div>   <!-- end of corvus-main -->
+
+<hr>
+<div id="foot1"></div> 
+
+
+</body>
+</html>

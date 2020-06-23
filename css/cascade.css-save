@@ -1,0 +1,54 @@
+#header{
+  background-color: #a4001d;
+  color:white; 
+}
+
+#box-1{
+	background-color: #f2f2f2; 
+}
+
+	//background-color: #f2f2f2; 
+//background-image: url("backgr.png")
+
+#buttons{
+    position:absolute;
+    right: 0;
+    width: 100px;
+    height: 120px;
+}
+
+.btn{
+background-color: #007662;
+border: none;
+}
+
+
+#steps{
+	position: absolute;
+	bottom:0;
+	left:0;
+}
+
+
+
+#birdimg {
+    max-width: 200px;
+    height: 100px;
+    background-color: #a4001d;
+}
+
+.flexim{
+    float:left;
+    width:100%;
+    height:100%;
+    object-fit: scale-down;
+}
+
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+

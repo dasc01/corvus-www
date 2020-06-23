@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Corvus Existing File</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://newt.nersc.gov/js/newt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/ChemDoodleWeb/ChemDoodleWeb.js"></script>
+  <script type="text/javascript" src="js/manCorvus.js"></script>
+  <link rel="stylesheet" href="/ChemDoodleWeb/ChemDoodleWeb.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/cascade.css">
+
+
+</head>
+<body id="box-1">
+<div id="navbar1"></div>	
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+    <div class="col-sm-4">
+  <ul id="corNav" class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="/corvusNew.html">Input</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/corvusManage.html">Manage</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/corvusOutput.html">Output</a>
+    </li>
+  </ul>
+</div>
+</div>
+</nav> -->
+
+
+<header id="header" class="page-header">
+  <div class="container-fluid">
+  <div class="row">
+    <div  class="col-sm-4">
+      <img id="birdimg" src="css/bird.png" >
+    </div>
+    <div class="col-sm-4"> 
+    <h1 class="text-center">Corvus Existing File</h1>
+    <p></p> 
+  </div>
+</div>
+</div>
+</header>
+  
+<div class="container-fluid">
+<div class="row">
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- ScrollBar -->
+    <div class="col-sm-5">
+    <div id="fileBox" style="width:100%;height:500px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;border:4px double #DEBB07;">
+      This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large. 
+</div>
+      
+      
+    </div>
+    <!-- drop down menu -->
+<div class="col-sm-2">
+<form action="/action_page.php">
+    <div class="form-group">
+      <label for="sel1">Choose Calculation (select one):</label>
+      <select class="form-control" id="sel1" name="sellist1">
+        <option>ENERGY</option>
+        <option>OPTIMIZE</option>
+        <option>SPECTRA</option>
+      </select>
+    </div>
+    <button id="rnJob" type="submit" class="btn btn-primary">Run</button>
+  </form>
+</div>
+<div class="col-sm-5" id="graph" >
+    <script type="text/javascript" src="js/exInput.js"></script>
+</div>
+</div>
+</div>
+
+<hr>
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div>
+   <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div>
+   <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div> 
+</div>
+</div>
+
+<hr>
+
+<footer class="p-3 mb-2 bg-secondary text-white">
+  <div class="container-fluid">
+  <div class="row">
+    <div  class="col-sm-3">
+      <img id="birdimg" src="css/bird.png" >
+    </div>
+    <div class="col-sm-6">
+        <p class="text-center">SLAC NATIONAL ACCELERATOR LABORATORY 2575 <span> Sand Hill Road, Menlo Park, CA 94025</span></p>
+    <p class="text-center">Operated by Stanford University for the U.S. Department of Energy Office of Science
+    </p>  
+  </div>
+</div>
+</div>
+</footer>
+
+
+</body>
+</html>

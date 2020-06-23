@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Corvus Output</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/ChemDoodleWeb/ChemDoodleWeb.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="css/cascade.css">
+ 
+  
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <script src="https://newt.nersc.gov/js/newt.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+  <!-- fusion chart -->
+  <script type="text/javascript" src="fusioncharts\js\fusioncharts.js"></script>
+  <script type="text/javascript" src="fusioncharts\js\themes\fusioncharts.theme.fusion.js"></script>
+  <script type="text/javascript" src="/ChemDoodleWeb/ChemDoodleWeb.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/manCorvus.js"></script>
+
+</head>
+<body id="box-1">
+<div id="navbar1"></div>	
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container-fluid">
+    <div class="col-sm-4">
+  <ul id="corNav" class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Input</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Manage</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Output</a>
+    </li>
+  </ul>
+</div>
+</div>
+</nav> -->
+
+
+<header id="header" class="page-header">
+  <div class="container-fluid">
+  <div class="row">
+    <div  class="col-sm-4">
+      <img id="birdimg" src="css/bird.png" >
+    </div>
+    <div class="col-sm-4"> 
+    <h1 class="text-center">Corvus Output</h1> 
+  </div>
+</div>
+</div>
+</header>
+  
+<div class="container-fluid">
+<div class="row">
+</div>
+</div>
+
+
+<div class="container-fluid">
+  <div class="row">
+
+    <!-- ScrollBar -->
+    <div class="col-sm-5">
+    <div id="fileBox" style="width:100%;height:500px;line-height:3em;overflow:scroll;padding:5px;background-color:#FCFADD;color:#714D03;border:4px double #DEBB07;">
+      This 'div' element uses 'overflow:scroll' to create scrollbars whenever the contents of the 'div' become too large. 
+</div>
+      
+      
+    </div>
+    <!-- drop down menu -->
+<div class="col-sm-2">
+<form action="/action_page.php">
+    <div class="form-group">
+      <label for="sel1">Choose Calculation (select one):</label>
+      <select class="form-control" id="sel1" name="sellist1">
+        <option>ENERGY</option>
+        <option>OPTIMIZE</option>
+        <option>SPECTRA</option>
+      </select>
+    </div>
+    <button id="rnCal" type="submit" class="btn btn-primary">Run</button>
+  </form>
+</div>
+
+<div class="col-sm-5" id="graph" >
+      <!-- <form id="myUpload" action="https://newt.nersc.gov/newt/file/cori/global/homes/k/karinac" method="post" enctype="multipart/form-data">
+      <label for="id_file">File:</label>s
+      <input type="file" name="file" id="id_file" />
+      <input type="submit" class="btn btn-success" value="upload" /> 
+      <hr>
+      <script type="text/javascript" src="js/newt.js"></script>
+      </form> -->
+    
+            <!-- graph -->
+    
+    <title>FusionCharts Suite XT</title>
+    <script type="text/javascript" src="\fusioncharts\js\fusioncharts.js"></script>
+    <script type="text/javascript" src="\fusioncharts\js\themes\fusioncharts.theme.fusion.js"></script>
+    <script type="text/javascript">
+      
+        FusionCharts.ready(function() {
+          var myData = [
+        {
+          label: "2005",
+          value: "89.45"
+        },
+        {
+          label: "2006",
+          value: "89.87"
+        },
+        {
+          label: "2007",
+          value: "89.64"
+        },
+        {
+          label: "2008",
+          value: "90.13"
+        },
+        {
+          label: "2009",
+          value: "90.67"
+        },
+        {
+          label: "2010",
+          value: "90.54"
+        },
+        {
+          label: "2011",
+          value: "90.75"
+        },
+        {
+          label: "2012",
+          value: "90.8"
+        },
+        {
+          label: "2013",
+          value: "91.16"
+        },
+        {
+          label: "2014",
+          value: "91.37"
+        },
+        {
+          label: "2015",
+          value: "91.66"
+        },
+        {
+          label: "2016",
+          value: "91.8"
+        }
+      ];
+  var myChart = new FusionCharts({
+    type: "line",
+    renderAt: "chart-container",
+    width: "100%",
+    height: "100%",
+    dataFormat: "json",
+    dataSource: {
+      chart: {
+        caption: "Average Fastball Velocity",
+        yaxisname: "Velocity (in mph)",
+        subcaption: "[2005-2016]",
+        numbersuffix: " mph",
+        rotatelabels: "1",
+        setadaptiveymin: "1",
+        theme: "fusion"
+      },
+      data: myData
+    }
+  });
+  myChart.render();
+});
+    </script>
+     <div id="chart-container">FusionCharts XT!</div>
+      <!-- end of graph -->
+</div>
+</div>
+</div>
+
+<hr>
+
+<div class="container-fluid">
+<div class="row">
+  <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div>
+   <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div>
+   <div class="col-sm-4">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,</p>
+  </div> 
+</div>
+</div>
+
+<hr>
+
+<footer class="p-3 mb-2 bg-secondary text-white">
+  <div class="container-fluid">
+  <div class="row">
+    <div  class="col-sm-3">
+      <img id="birdimg" src="css/bird.png" >
+    </div>
+    <div class="col-sm-6">
+        <p class="text-center">SLAC NATIONAL ACCELERATOR LABORATORY 2575 <span> Sand Hill Road, Menlo Park, CA 94025</span></p>
+    <p class="text-center">Operated by Stanford University for the U.S. Department of Energy Office of Science
+    </p>  
+  </div>
+</div>
+</div>
+</footer>
+
+
+</body>
+</html>

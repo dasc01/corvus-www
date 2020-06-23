@@ -1,0 +1,48 @@
+
+<html>
+<head><title> Hello NEWT</title>
+<script src="https://newt.nersc.gov/js/jquery-1.7.2.js"></script>
+<script src="https://newt.nersc.gov/js/newt.js"></script>
+
+<script type="text/javascript">
+$.newt_ajax({type: "GET",
+    url: "/login",    
+    success: function(res){
+        // res is { username: 'xxxxx', auth: true|false }
+        $("#auth").html("Login Status: "+res.auth);
+    },
+});
+
+$.newt_ajax({type: "POST",
+    url: "/command/cori",
+    data: {"executable": "/bin/date"},    
+    success: function(res){
+        // res is { output: "output string", error: "error string", }
+        $("#date").html("The Date is "+res.output);
+    },
+});
+
+
+$.newt_ajax({type: "GET",
+    url: "/file/cori/etc/motd?view=read",
+    success: function(res){
+        // res contains raw file data
+        $('#file').html(res);
+    },
+});
+
+</script>
+
+</head>
+
+<body>
+Hello World<br/>
+<div id="auth"></div>    
+
+<div id="date"></div>    
+
+File Contents:
+<pre id="file"></pre>    
+
+</body>
+</html>

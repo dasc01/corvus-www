@@ -1,0 +1,41 @@
+#header{
+  background-color: #b62f2f;
+  color:white;
+}
+
+
+#box-1{
+	background-color: #f2f2f2; 
+}
+
+
+
+#buttons{
+	position:absolute;
+    right: 0;
+    width: 100px;
+    height: 120px;
+}
+
+
+
+#steps{
+	position: absolute;
+	bottom:0;
+	left:0;
+}
+
+
+
+#birdimg {
+    max-width: 200px;
+    height: 100px;
+    background-color: #b62f2f;
+}
+
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+

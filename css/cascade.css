@@ -1,0 +1,90 @@
+#header {
+  background-color: #000; 
+  height: 144px !important;
+}
+
+#box-1, #sel1, #sel1 option {
+   background-color: #000 !important;
+}
+
+.nav-link {
+    color: #aeb2b1 !important;
+}
+
+.nav-link:hover {
+    background-color: #91424f !important;
+}
+
+#buttons {
+    position:absolute;
+    right: 0;
+    width: 100px;
+    height: 120px;
+}
+
+.btn {
+background-color: #42826a;
+border: none;
+}
+
+.row a {
+    color: #1d1e1e !important;
+}
+
+#steps {
+	position: absolute;
+	bottom:0;
+	left:0;
+}
+
+#birdimg {
+    max-width: 200px;
+    height: 100px;
+    background-color: #9b3740;
+    top:91px;
+}
+
+a:hover, #rnCal:hover, #fileUp:hover, #rnJob:hover {
+    background-color: #99b2a4 !important;
+    color: #000 !important;
+}
+
+.flexim{
+    float:left;
+    width:100%;
+    height:100%;
+    object-fit: scale-down;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container-fluid {
+    background-color: black !important;
+    color: #808282;
+    position: fixed:
+}
+
+#transformBallAndStick {
+    background-color: #434444 !important;
+    border-style: double;
+}
+
+#id_file, #sel1 {
+    background-color: #212529;    
+}
+
+#rnCal, #fileUp {
+    background-color: #42826a !important;
+}
+
+#rnCal {
+    margin-top: 5px;
+}
+
+#display_rows {
+    background-color: #aeafaf !important;
+}
+

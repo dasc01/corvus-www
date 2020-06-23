@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Corvus New System</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="ChemDoodleWeb/ChemDoodleWeb.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/cascade.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://newt.nersc.gov/js/newt.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="ChemDoodleWeb/ChemDoodleWeb.js"></script>
+    <script type="text/javascript" src="js/manCorvus.js"></script>
+
+
+  </head>
+  <body class="box-1">
+    <div id="corvus-main">
+      <div id="navbar1"></div>
+
+      <header id="header" class="page-header">
+	<div class="container-fluid">
+	  <div class="row">
+	    <div  class="col-sm-4">
+	      <img id="birdimg" src="css/bird.png" >
+	    </div>
+	    <div class="col-sm-4"> 
+	      <h1 class="text-center">Corvus Create</h1>
+	      <p class="text-center">Start a new simulation project</p> 
+	    </div>
+	  </div>
+	</div>
+      </header>
+
+      <div class="container-fluid">
+	<div class="row">
+	  <div class="col-sm-1">
+	  </div>
+	  <div class="col-sm-5">
+	    <div class="row">
+	      <p class="font-weight-bold">Step 1: Choose a structure file</p> 
+	    </div>
+	    <div class="row">
+	      <form id="myUpload" action="#" method="post" enctype="multipart/form-data">
+		<label for="id_file">File:</label>
+		<input type="file" name="file" id="id_file" />
+		<input id="fileUp" type="submit" class="btn btn-success" value="Upload" /> 
+		<hr>
+	      </form>
+	    </div>
+	    <div class="row">
+	      <form id="calFr" action="">
+		<label for="sel1" class="font-weight-bold">Step 2: Choose a property to simulate</label>
+		  <select class="form-control" id="sel1" name="calctype">
+		    <option>ENERGY</option>
+		    <option>OPTIMIZE</option>
+		    <option>SPECTRA</option>
+		  </select>
+		  <input id="rnCal" type="submit" class="btn  btn-primary btn-block" value="Run Calculation"/> <!--</button> -->
+	      </form>
+	    </div>
+	    <hr>
+	    <div class="row">
+	      <span id="ldr2" style="display:none;">
+		<img src="css/spinner.gif">
+	      </span>
+	    </div>
+	  </div>
+	  <div class="col-sm-6">
+	    <script type="text/javascript" src="js/newInput.js"></script>
+	  </div>
+	</div>
+      </div>
+    </div>   <!-- end of corvus-main -->
+
+   <!-- <hr>-->
+<div id="foot1"></div> 
+  </body>
+</html>
